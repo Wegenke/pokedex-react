@@ -1,0 +1,344 @@
+html {
+  background-color: rgb(47, 46, 46);
+  min-height: 100%;
+  background-image: url('/pokeball.png');
+  background-position:center;
+
+}
+#root {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  max-height: 1vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  background-color: #ffde00;
+  color: #3b4caa;
+  border-radius: 10px;
+  font-size: x-large;
+  font-weight: bold;
+  padding: 2px 10px;
+  max-width: 300px;
+  margin: 3px auto;
+  font-family: inherit;
+}
+
+#navBar {
+  text-align: center;
+  display: grid;
+  column-gap: 5px;
+}
+
+#navButtons{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#homeButton{
+  grid-column-start: 2;
+}
+
+.homePage {
+  display: grid;
+  place-items: center;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+#loadingBall{
+  width: 300px;
+  height: 300px;
+  padding: 100px;
+}
+
+.teamMember #loadingContainer{
+  height: inherit;
+  width: inherit;
+}
+
+.teamMember #loadingBall{
+  height: 200px;
+  width: 200px;
+  padding: 50px;
+}
+
+#loadingContainer{
+  margin-top: 25px;
+  animation: rotation 1s linear infinite;
+  transform: translateZ(0);
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  width: 500px;
+  background-image: radial-gradient( rgb(6, 250, 2), transparent 65%);
+  background-blend-mode: lighten;
+  border-radius: 500px;
+}
+
+input{
+  font-family: inherit;
+  background-color: #ffde00;
+  color: #3b4caa;
+  font-weight: bolder;
+  border-radius: 10px;
+  font-size: x-large;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2px;
+  margin: auto 5px;
+}
+
+.details {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 50%;
+  min-width:750px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: center;
+  color: aliceblue;
+}
+
+#purgeButton{
+  background-color: olive;
+  color: khaki;
+}
+
+
+.detailPage{
+  display: flex;
+  justify-content: center;
+}
+
+.teamPage{
+  margin-top: 10px;
+  min-height: 750px;
+  max-height: 1000px;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('/pokemonbg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 10px 10px rgb(131, 1, 1);
+  border-radius: 25px;
+}
+
+.myTeam {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  gap: 5px 20px;
+  padding: 10px 100px;
+  margin:auto 100px
+}
+
+.teamMember {
+  width:300px;
+}
+
+.teamPage #teamTitle{
+  margin: 15px auto;
+  font-size: 3em;
+  text-shadow: 2px 2px 1px rgb(227, 11, 11);
+}
+
+.dropPokemon{
+  margin-top: -30px;
+  background-color: rgb(144, 24, 24);
+  color: beige;
+}
+
+.pokeList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.modal-content h1{
+  background-color: rgba(83, 33, 209, 0.5);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  width: 600px;
+  place-self: center;
+}
+
+h2, h1 {
+  text-transform: uppercase;
+  text-align: center;
+  color: aliceblue;
+  font-size: xx-large;
+  text-shadow: 1px 1px 2px gray;
+
+}
+
+.pokeman {
+  width: 300px;
+  border-radius: 25px;
+  box-shadow:inset -1px -1px 10px #ffffff,inset 1px 1px 10px #ffde00;
+}
+
+.listName {
+  margin-top: 0px;
+  margin-bottom: -30px;
+}
+
+.pages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pages button{
+  width: 135px;
+  margin: 4px 4px;
+}
+
+.onlymon {
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+a {
+  text-align: center;
+  max-height: 80%;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  cursor: default;
+}
+
+.container .name-img {
+  padding: 15px 0px 15px 15px;
+}
+
+.container .moves {
+  padding: 15px 15px 15px 0px;
+  font-size: x-large;
+  color: aliceblue;
+  text-shadow: 1px 1px 2px gray;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+}
+
+.modal-content {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1001;
+  display: grid;
+}
+
+.modal-content #teamTitle{
+  display: none;
+}
+
+.modal-close-button {
+  margin-top: 20px;
+  width: 300px;
+  font-size: xx-large;
+}
+
+#addButton{
+  width: 250px;
+  margin-right: 5px;
+}
+
+.grass {
+  background: linear-gradient(to top, green, black);
+}
+
+.fire {
+  background: linear-gradient(to top, red, black);
+}
+
+.water {
+  background: linear-gradient(to top, blue, black);
+}
+
+.bug {
+  background: linear-gradient(to top, yellowgreen, black);
+}
+
+.normal {
+  background: linear-gradient(to top, tan, black);
+}
+
+.flying {
+  background: linear-gradient(to top, rgb(196, 194, 192), black);
+}
+
+.ghost {
+  background: linear-gradient(to top, purple, black);
+}
+
+.psychic {
+  background: linear-gradient(to top, pink, black);
+}
+
+.dark {
+  background: linear-gradient(to top, rgb(21, 21, 21), black);
+}
+
+.dragon {
+  background: linear-gradient(to top, orange, black);
+}
+
+.ice {
+  background: linear-gradient(to top, lightblue, black);
+}
+
+.rock {
+  background: linear-gradient(to top, brown, black);
+}
+
+.fairy {
+  background: linear-gradient(to top, pink, black);
+}
+
+.electric {
+  background: linear-gradient(to top, yellow, black);
+}
+
+.ground {
+  background: linear-gradient(to top, rgb(169, 101, 13), black);
+}
+
+.fighting {
+  background: linear-gradient(to top, red, black);
+}
+
+.steel {
+  background: linear-gradient(to top, silver, black);
+}
+
+.poison {
+  background: linear-gradient(to top, violet, black);
+}
