@@ -10,8 +10,8 @@ function App() {
   });
 
   const [pokeList, setPokeList] = useState([]);
-  const [curPage, setCurPage] = useState("https://pokeapi.co/api/v2/pokemon?limit=9");
 
+  const [curPage, setCurPage] = useState("https://pokeapi.co/api/v2/pokemon?limit=9");
   const [nextPage, setNextPage] = useState(null);
   const [prevPage, setPrevPage] = useState(null);
 
